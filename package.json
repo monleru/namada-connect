@@ -1,16 +1,23 @@
 {
   "name": "namada-connect",
-  "version": "0.1.0",
+  "version": "0.1.5",
   "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/monleru/namada-connect"
   },  
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "build": "tsc --declaration && vite build",
+    "publish" : "tsc --declaration && npm publish",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
+  },
+  "main":"./dist/index.js",
+  "module": "./dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    }
   },
   "dependencies": {
     "@dao-xyz/borsh": "^5.1.5",
