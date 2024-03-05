@@ -3,7 +3,7 @@
     "outDir": "./dist",
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
-    "baseUrl": "./src",
+    "baseUrl": "srcs",
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
@@ -20,6 +20,6 @@
     "target": "es2015"
   },
   "exclude": ["**/*.tsx"],
-  "include": ["src","src/customGlobal.d.ts"],
+  "include": ["srcs","srcs/customGlobal.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

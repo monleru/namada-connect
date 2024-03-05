@@ -24,7 +24,7 @@ dist-ssr
 
 
 node_modules
-src
+srcs
 test
 
 src

@@ -1,4 +1,4 @@
-import { Account, DerivedAccount } from "types";
+import { Account, DerivedAccount } from "../types";
 import { submitTransferTransaction } from "./transfer";
 import BigNumber from "bignumber.js";
 import { submitBond } from "./bond";
