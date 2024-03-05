@@ -4,11 +4,11 @@
 
 ##### Install npm:
 ```
-npm i namada-connector
+npm i namada-connect
 ```
 ##### install yarn:
 ```
-yarn add namada-connector
+yarn add namada-connect
 ```
 # Example:
 
