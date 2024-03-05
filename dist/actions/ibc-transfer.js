@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 export const submitIbcTransferTransaction = (txTransferArgs) => __awaiter(void 0, void 0, void 0, function* () {
     const { account, amount, chainId, token, // TODO: Re-enable
-    disposableSigningKey, feeAmount, gasLimit, memo, nativeToken, } = txTransferArgs;
+    disposableSigningKey, feeAmount, gasLimit, memo, nativeToken, channelId, portId } = txTransferArgs;
     if (!feeAmount || !gasLimit) {
         return;
     }
@@ -18,11 +18,11 @@ export const submitIbcTransferTransaction = (txTransferArgs) => __awaiter(void 0
     console.log(signer);
     const transferArgs = {
         source: address,
-        channelId: "channel-228",
+        channelId,
         token: token.address,
         amount,
         receiver: address,
-        portId: "50",
+        portId,
     };
     const txArgs = {
         token: nativeToken, // TODO: Update to support other tokens again!
